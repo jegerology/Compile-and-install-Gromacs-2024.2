@@ -1,5 +1,5 @@
 # 准备工作-_Preparatory work_
-- **声明：编译安装过程使用系统为 centos7，服务器编译环境及硬件配置：cmake 3.29.6/gcc 9.3.1/cuda 12.4/openmpi 5.0.1/fftw为 gromacs 自行安装（CPU使用了fftw-3.3.8版本，GPU使用了cuFFT）/两颗Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz/NVIDIA GeForce RTX 4060 Ti/64GB 内存**
+- **声明：编译安装过程使用系统为 centos7，服务器编译环境及硬件配置：cmake 3.29.6/gcc 9.3.1/cuda 12.4/openmpi 5.0.1/fftw为 gromacs 自行安装（CPU使用了fftw-3.3.8版本，GPU使用了cuFFT）/两颗Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz/NVIDIA GeForce RTX 4060 Ti/64GB 内存。值得一提的是，root用户最好预留足够的根分区储存空间，以免模拟过程中产生的文件积攒导致空间不足而任务失败。**
 - Declaration: This compilation process uses the centos7 system, so check whether the compilation environment used is upgraded, and the preparation part needs to operate according to their actual system environment and its own gcc, cmake and other versions.
 ## 检查系统编译环境-_Check the system compilation environment_
 
