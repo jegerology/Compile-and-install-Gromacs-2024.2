@@ -58,7 +58,7 @@ sudo make install
 echo "export LD_LIBRARY_PATH=/jer/GMX2024.2/fftw3310/fftw-3.3.10/lib:\$LD_LIBRARY_PATH" >> ~/.bashrc  # 如果安装到了非标准路径，更新环境变量，将 FFTW 的库路径添加到 LD_LIBRARY_PATH
 source ~/.bashrc
 ```
-## 重装 cuda toolkit_-Reinstall the cuda toolkit_
+## 重装 cuda toolkit-_Reinstall the cuda toolkit_
 ```
 # 经nvidia-smi与nvcc --version检查发现两者版本不同，在CMake编译时会报错，笔者重新安装适配的cuda toolkit 12.4
 # 卸载旧版cuda toolkit
