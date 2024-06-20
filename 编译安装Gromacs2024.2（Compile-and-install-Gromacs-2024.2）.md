@@ -149,5 +149,6 @@ gmx2024 --version
 # mpi版Gromacs用mpirun，对于root用户，OpenMPI要求每次执行mpirun命令都得带着-allow-run-as-root选项才行，解决方法参考：http://sobereva.com/409
 gmx2024 mpirun -allow-run-as-root -np 36 gmx_mpi mdrun -s benchMEM.tpr -noconfout -nsteps 10000 -pin on -nb gpu
 # 普通单精度Gromacs，使用单核心cpu
-gmx2024 mdrun -nt 36 -s benchMEM.tpr -noconfout -nsteps 10000 -pin on -nb gpu # 68.346 ns/d
+gmx2024 mdrun -nt 36 -s benchMEM.tpr -noconfout -nsteps 10000 -pin on -nb gpu # 笔者单次测试结果68.346 ns/d
+gmx2024 mdrun -ntmpi 4 -ntomp 9 -s benchMEM.tpr -noconfout -nsteps 10000 -pin on -nb gpu # 笔者单次测试结果53.701 ns/d
 ```
