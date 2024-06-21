@@ -142,7 +142,7 @@ gmx2024 --version
 ```
 # 性能测试-_Performance test_
 
-- **运行测试案例，确保 GROMACS 正常工作，可以从Max Planck Institute for Multidisciplinary Sciences （**[**https://www.mpinat.mpg.de/grubmueller/bench**](https://www.mpinat.mpg.de/grubmueller/bench)**）提供的GROMACS基准测试集中下载TPR文件来进行性能测试。这些基准测试集包含了不同系统大小的模拟系统，从6千到1200万原子不等，非常适合用来评估GROMACS的性能。比如下载：**[**benchMEM (82k atoms, protein in membrane surrounded by water, 2 fs time step)**](https://www.mpinat.mpg.de/benchMEM)** 这个 tpr 文件进行测试 `mdrun`，本次笔者使用此文件进行测试。
+- **运行测试案例，确保 GROMACS 正常工作，可以从Max Planck Institute for Multidisciplinary Sciences （**[**https://www.mpinat.mpg.de/grubmueller/bench**](https://www.mpinat.mpg.de/grubmueller/bench)**）提供的GROMACS基准测试集中下载TPR文件来进行性能测试。这些基准测试集包含了不同系统大小的模拟系统，从6千到1200万原子不等，非常适合用来评估GROMACS的性能。比如下载：**[**benchMEM (82k atoms, protein in membrane surrounded by water, 2 fs time step)**](https://www.mpinat.mpg.de/benchMEM) 这个 tpr 文件进行测试 `mdrun`，本次笔者使用此文件进行测试。
 - **如果网络慢，可本地下载解压后，用 `scp` 上传到服务器**
 - Run test cases to ensure GROMACS works properly, From the Max Planck Institute for Multidisciplinary Sciences ([https://www.mpinat.mpg.de/grubmueller/bench)](https://www.mpinat.mpg.de/grubmueller/bench)) provides GROMACS benchmark test set download TPR files for performance test. These benchmark sets, which contain simulations of different system sizes ranging from 6 to 12 million atoms, are ideal for evaluating GROMACS performance. For example, download: benchMEM (82k atoms, protein in membrane surrounded by water, 2 fs time step) this tpr file to test `mdrun`
 - If the network is slow, you can download and decompress it locally and upload it to the server using `scp`
