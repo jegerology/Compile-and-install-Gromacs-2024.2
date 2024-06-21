@@ -89,7 +89,7 @@ tar -xvzf regressiontests-2024.2.tar.gz
 - **笔者所用 NVIDIA GeForce RTX 4060 Ti GPU 支持的 CUDA 架构是 compute_86，在配置 GROMACS 时，需要确保 CMake 配置中指定的 GPU 架构与 GPU 兼容。由于笔者本次遇到了关于 ‘compute_35’ 的错误，需要更新 CMake 配置以匹配 GPU：**
    1. **编辑 CMake 配置：打开 GROMACS CMake 配置文件，包括源代码目录中的 CMakeLists.txt 和构建目录中的 CMakeCache.txt。**
    2. **修改 GPU 架构设置：找到所有提及 ‘compute_35’ 的地方，并将其改为 ‘compute_86’（ 笔者操作时 CMakeCache.txt 中有三处， CMakeLists.txt 没有）。**
-   3. **清理构建目录：在您的构建目录中运行以下命令来清理之前的构建文件：`**make clean**`，或者直接删除 build 目录，重新 cmake 编译。**
+   3. **清理构建目录：在您的构建目录中运行以下命令来清理之前的构建文件：`make clean`，或者直接删除 build 目录，重新 cmake 编译。**
 - **另外，centos7 默认 python 3.6，但 Gromacs 需要 python >=3.7，而且需要基于 3.7 安装Sphinx：首先安装 python3.7，然后设为 python3 默认版本，利用 3.7 的 pip 进行Sphinx安装。**
 - If there are multiple versions of Gromacs, they need to be installed separately
 - The CUDA architecture supported by NVIDIA GeForce RTX 4060 Ti Gpus is compute_86. When configuring GROMACS, ensure that the GPU architecture specified in the CMake configuration is compatible with the GPU. Since I encountered an error with 'compute_35' this time, I need to update the CMake configuration to match the GPU:
@@ -142,8 +142,8 @@ gmx2024 --version
 ```
 # 性能测试-_Performance test_
 
-- **运行测试案例，确保 GROMACS 正常工作，可以从Max Planck Institute for Multidisciplinary Sciences （**[**https://www.mpinat.mpg.de/grubmueller/bench**](https://www.mpinat.mpg.de/grubmueller/bench)**）提供的GROMACS基准测试集中下载TPR文件来进行性能测试。这些基准测试集包含了不同系统大小的模拟系统，从6千到1200万原子不等，非常适合用来评估GROMACS的性能。比如下载：**[**benchMEM (82k atoms, protein in membrane surrounded by water, 2 fs time step)**](https://www.mpinat.mpg.de/benchMEM)** 这个 tpr 文件进行测试 **`**mdrun**`**，本次笔者使用此文件进行测试。**
-- **如果网络慢，可本地下载解压后，用 `**scp**` 上传到服务器**
+- **运行测试案例，确保 GROMACS 正常工作，可以从Max Planck Institute for Multidisciplinary Sciences （**[**https://www.mpinat.mpg.de/grubmueller/bench**](https://www.mpinat.mpg.de/grubmueller/bench)**）提供的GROMACS基准测试集中下载TPR文件来进行性能测试。这些基准测试集包含了不同系统大小的模拟系统，从6千到1200万原子不等，非常适合用来评估GROMACS的性能。比如下载：**[**benchMEM (82k atoms, protein in membrane surrounded by water, 2 fs time step)**](https://www.mpinat.mpg.de/benchMEM)** 这个 tpr 文件进行测试 `mdrun`，本次笔者使用此文件进行测试。**
+- **如果网络慢，可本地下载解压后，用 `scp` 上传到服务器**
 - Run test cases to ensure GROMACS works properly, From the Max Planck Institute for Multidisciplinary Sciences ([https://www.mpinat.mpg.de/grubmueller/bench)](https://www.mpinat.mpg.de/grubmueller/bench)) provides GROMACS benchmark test set download TPR files for performance test. These benchmark sets, which contain simulations of different system sizes ranging from 6 to 12 million atoms, are ideal for evaluating GROMACS performance. For example, download: benchMEM (82k atoms, protein in membrane surrounded by water, 2 fs time step) this tpr file to test `mdrun`
 - If the network is slow, you can download and decompress it locally and upload it to the server using `scp`
 ```
