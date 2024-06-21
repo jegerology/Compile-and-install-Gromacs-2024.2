@@ -117,7 +117,7 @@ cmake ../gromacs-2024.2 \
   -DPYTHON_EXECUTABLE=/usr/local/bin/python3.7 \
   -DPython3_ROOT_DIR='/usr/local/bin' \
   -DGMX_SIMD=AVX2_256 \
-  -DGMX_MPI=OFF \ # 编译时报错未解决索性关闭
+  -DGMX_MPI=OFF \
   -DGMX_GPU=CUDA \
   -DCMAKE_INSTALL_PREFIX=~/Software/GMX/2024.2-cuda \
   -DGMX_BUILD_OWN_FFTW=ON \
