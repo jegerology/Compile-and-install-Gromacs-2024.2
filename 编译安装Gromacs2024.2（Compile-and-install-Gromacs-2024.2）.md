@@ -1,6 +1,6 @@
 **视频演示链接：【Gromacs2024.2版安装全程及代码分享-纯干货】 https://www.bilibili.com/video/BV1GM4m1m7uq/?share_source=copy_web&vd_source=e986a18a26b36d1763a9c84f951a2ff0**
 
-**——*by* 大导心腹**
+**——*by* 木水**
 
 # 准备工作-_Preparatory work_
 - **声明：编译安装过程使用系统为 centos7，服务器编译环境及硬件配置：cmake 3.29.6/gcc 9.3.1/cuda 12.4/openmpi 5.0.1/fftw为 gromacs 自行安装（CPU使用了fftw-3.3.8版本，GPU使用了cuFFT）/两颗Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz/NVIDIA GeForce RTX 4060 Ti/64GB 内存。值得一提的是，root用户最好预留足够的根分区储存空间，以免模拟过程中产生的文件积攒导致空间不足而任务失败。**
